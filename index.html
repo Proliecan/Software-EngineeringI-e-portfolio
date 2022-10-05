@@ -1,48 +1,102 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2
-						<aside class="notes">
-						<p>Some notes</p>
-						</aside>
-						<p>Some slide text</p>
-						<aside class="notes">
-						<p>and some more notes</p>
-					</aside>
-				</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/blood.css">
+	<link rel="stylesheet" href="dist/custom.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section 	data-markdown="slides.md" 
+						data-separator="^==" 
+						data-separator-vertical="^--"
+						data-separator-notes="^Note:" 
+						<!-- data-charset="iso-8859-15"--> >
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			controls: true,
+			controlsTutorial: false,
+			controlsLayout: 'edges',		// edges/bottom-right
+			touch: true,					// Enables touch navigation
+			mouseWheel: false,
+			navigationMode: 'linear',		// default/linear/grid
+			transition: 'slide', 			// none/fade/slide/convex/concave/zoom
+			backgroundTransition: 'fade', 	// none/fade/slide/convex/concave/zoom
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			hideInactiveCursor: true,
+			hideInactiveCursor: true,
+
+			autoPlayMedia: null,			// mull/true/false
+			preloadIframes: null,			// null/true/false
+			previewLinks: true,
+
+			progress: true,					// progress bar
+			slideNumber: 'h.v',
+			showSlideNumber: 'all', 		// all/print/speaker
+
+			hash: true,
+			fragmentInURL: true,
+			respondToHashChanges: true,
+			history: false,
+
+			keyboard: true, 				// shortcuts
+			help: true,						// press ? for help
+
+			disableLayout: false,
+			center: true,
+
+			loop: false,					// loop slides
+			shuffle: false,
+
+			autoAnimate: true,
+			autoAnimateEasing: 'ease',
+			autoAnimateDuration: 1.0,
+			autoAnimateUnmatched: true,
+			autoAnimateStyles: [
+				'opacity',
+				'color',
+				'background-color',
+				'padding',
+				'font-size',
+				'line-height',
+				'letter-spacing',
+				'border-width',
+				'border-color',
+				'border-radius',
+				'outline',
+				'outline-offset'
+			],
+
+			autoSlide: 0,					// in ms
+			autoSlideStoppable: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
