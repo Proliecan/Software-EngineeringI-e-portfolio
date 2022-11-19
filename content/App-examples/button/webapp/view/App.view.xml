@@ -1,0 +1,16 @@
+<mvc:View
+	height="100%"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout"
+    controllerName="hello_world.controller.say">
+	
+    <Button icon="sap-icon://geographic-bubble-chart" 
+            type="Accept"
+            press="onHello"
+            text="Say Hello"></Button>
+
+    <Input placeholder="Name" width="20vw" id="name" submit="onHello"></Input>
+
+</mvc:View>
