@@ -217,6 +217,36 @@ Open UI5
 <!-- .element class="fragment fade-up" -->
 
 --
+<!--.element: data-auto-animate -->
+### Controller <!-- omit in toc -->
+
+/controller/say.controller.js
+```javascript [9-19]
+  sap.ui.define(['sap/m/MessageToast',
+                 'sap/ui/core/mvc/Controller'],
+    function(MessageToast, Controller) {
+    "use strict";
+
+    var PageController = 
+            Controller.extend("hello_world.controller.say", {
+
+      onHello: function (evt) {
+        let name = this.getView().byId("name").getValue();
+
+        let message = ""
+        if (name === "")
+          message = "Hello World!"
+        else
+          message = "Hello " + name + "!"
+
+        MessageToast.show(message);
+      }
+    });
+
+    return PageController;
+  });
+```
+--
 <!-- .element data-background-iframe="/content/App-examples/button/webapp" -->
 --
 <!--.element: data-auto-animate -->
@@ -333,11 +363,11 @@ Advantages:
 + Exceptional docs
 
 </div>
-<div> <!-- .element class="fragment fade-up"  -->
+<div> <!-- .element class="fragment fade-up" style="max-width:50%"  -->
 
 Disadvantages:
 + Lots of boilerplate code
-+ Seperation of [...!] and concerns  
++ Separation of technology and concerns  
   -> complicated structure
 + Terrible loading times  
   (client side rendering)
@@ -349,11 +379,11 @@ Disadvantages:
 ## MIP <!-- omit in toc -->
 **(Most important points)** -->
 
---
+==
 
 # Q & A <!-- omit in toc -->
 
-==
+--
 
 ## Sources <!-- omit in toc -->
 
