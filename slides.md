@@ -19,7 +19,7 @@ Note: Image size too large
   - [Initialization](#initialization)
   - [XML Views](#xml-views)
   - [Controller](#controller)
-  - [Model (e.g. JSON / XML / *<u>OData</u>*)](#model-eg-json--xml--uodatau)
+  - [Model (e.g. JSON / XML / *OData*)](#model-eg-json--xml--odata)
 - [Case Study](#case-study)
 - [Assessment](#assessment)
 
@@ -155,7 +155,7 @@ Open UI5
 <!-- .element class="fragment fade-up"  -->
 
 --
-<!-- .element data-background-iframe="/content/App-examples/hello_world/webapp" -->
+<!-- .element data-background-iframe="/content/ui5_examples/view/webapp" -->
 --
 <!--.element: data-auto-animate -->
 
@@ -247,7 +247,7 @@ Open UI5
   });
 ```
 --
-<!-- .element data-background-iframe="/content/App-examples/button/webapp" -->
+<!-- .element data-background-iframe="/content/ui5_examples/controller/webapp" -->
 --
 <!--.element: data-auto-animate -->
 ### Model (e.g. JSON / XML / *<u>OData</u>*)
@@ -341,7 +341,7 @@ sap.ui.define(['sap/ui/core/mvc/Controller',
 ```
 
 --
-<!-- .element data-background-iframe="/content/App-examples/cities/webapp" -->
+<!-- .element data-background-iframe="/content/ui5_examples/model/webapp" -->
 
 ==
 

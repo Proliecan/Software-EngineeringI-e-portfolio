@@ -1,0 +1,3 @@
+[submodule "content/ui5_examples"]
+	path = content/ui5_examples
+	url = https://github.com/Proliecan/ui5_examples.git
