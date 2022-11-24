@@ -346,6 +346,17 @@ sap.ui.define(['sap/ui/core/mvc/Controller',
 ==
 
 ## Case Study
+<div style="display:flex;align-items: center;">
+  <img src="https://static.finnhub.io/img/finnhub_2020-05-09_20_51/logo/logo-gradient2.png" style="width:10vw;height: fit-content;flex-grow:1;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/OpenUI5_logo_horizontal_blue.svg" style="width:40vw;height: fit-content;flex-grow:1">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/JSON_vector_logo.svg" style="height:5vw;height: fit-content;flex-grow:1">
+</div>
+
+Note:
+
+--
+<!-- .element data-background-iframe="/content/ui5_examples/stock-tracker/webapp" -->
+Note:
 
 ==
 
