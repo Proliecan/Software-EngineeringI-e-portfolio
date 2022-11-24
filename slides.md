@@ -2,12 +2,14 @@
 
 ![OpenUI5 Banner](https://camo.githubusercontent.com/79cc251c5c489cb14c432e4861bec5c9e679e925c975f3625ab1e64984bf90ff/68747470733a2f2f6f70656e7569352e6f72672f696d616765732f4f70656e5549355f6e65775f6269675f736964652e706e67) <!-- .element: style="width:50%;" -->
 
+Note: Attention...
+
 --
 **C. "Elliot" Heeren**  
 ![Elliot's picture](./content/images/DSC03444.jpg)  <!-- .element: style="width:50%;" -->  
 Matr. : *1291292*
 
-Note: Image size too large
+Note: Only for grading
 
 --
 ### Content
@@ -23,6 +25,11 @@ Note: Image size too large
 - [Case Study](#case-study)
 - [Assessment](#assessment)
 
+Note: 
+- MVC:
+  - I will show you **three little example apps**
+- I will talk about 30 min. in total.
+
 ==
 ## Fiori
 <!-- ![Fiori Concept](content/images/Fiori-concept.png) -->
@@ -35,6 +42,19 @@ UI Design-Concept von SAP:
 [Fiori Design Guidelines](https://experience.sap.com/fiori-design/) <!--.element target="_blank"--> <br>
 [Button Design](https://experience.sap.com/fiori-design-web/button/) <!--.element target="_blank"--> 
 
+Note:
+- Let's start with Fiori:
+  - Is a **design concept**
+  - **Proprietary** and invented at SAP
+  - Used there for the majority of web-UI
+  - Well thought through:
+    - By **professional full-time UI-designers**
+    - Key aspects:
+      - Easy and intuitive **navigation**
+      - Straight-forward **data visualization and manipulation**
+      - **Inclusive and accessible** design
+  - Became the pretty-much-**standard in business Software**
+  
 --
 ## SAP UI5
 (SAP UI Development Toolkit for HTML5)
@@ -45,15 +65,36 @@ UI Design-Concept von SAP:
 + Focus on: 
   + Displaying and modifying data
   + Business applications
-+ Localization support
++ Really good localization support
++ Out-of-the-box components
 
 </div>
 <img src="https://skillicons.dev/icons?i=js" alt="Js Logo" style="margin-left:auto; height:30vh">
 </div>
 
+Note:
++ Wait, I thought we would talk about UI here?
+  + **JS-library for Fiori-compliant web-apps**
+  + Focuses on the **same key aspects**
+  + i18-System:
+    + brings really **easy Localization**
+    + makes UI built with UI5 even more accessible
+  + Delivers a huge set of **components and controls** out-of-the-box
+
 ==
 ### Architecture
 ![architecture of a sap UI5 App](content/images/architecture.png) <!--.element: style="height:50vh" -->
+
+Note:
+- This is the architecture of a typical **set of SAP UI5 apps**. 
+- They are made to function as a whole collection
+  - No Company uses only one app
+    - e.g: Vacation, payslip download, work schedule, ...
+  - Usually apps are connected by the Fiori Launchpad
+    - SAP product
+    - launcher for cloud-deployed apps (e.g. Cloud Foundry)
+
+- **Picture**
 
 --
 ## UI5 vs. *Open*UI5
@@ -79,6 +120,12 @@ Open UI5
 + Open Source <br> (Apache License 2.0): <br> [GitHub.com](https://github.com/SAP/openui5)
 </div>
 </div>
+
+Note:
++ Let's talk IP (Interlectual Property)
++ In general: 
+  + SAP owns SAP UI5
+  + But: free, open source version: OpenUI5 (Apache License 2.0)
 
 ==<!--.element: data-auto-animate -->
 ## Usage
@@ -110,6 +157,14 @@ Open UI5
   </html>
 ```
 
+Note:
+- Load script
+- Style body and make it known to UI5
+- Specify parameters:
+  - Theme (see Fiori?)
+  - Asynchronous UI loading (reduces loading time)
+  - resource roots (useful for bigger apps)
+- Initialization module
 --
 <!--.element: data-auto-animate -->
 ### Initialization <!-- omit in toc -->
@@ -128,6 +183,13 @@ Open UI5
   
   });
 ```
+
+Note:
+- just gonna gloss over it here
+- sap.ui.define: defines a new module
+  - Dependency matrix
+- Create a new view
+- Path to view (virtual module path)
 
 --
 <!--.element: data-auto-animate -->
@@ -154,8 +216,13 @@ Open UI5
 </div>
 <!-- .element class="fragment fade-up"  -->
 
+Note:
+
 --
 <!-- .element data-background-iframe="/content/ui5_examples/view/webapp" -->
+Note:
+- Hello-world App
+
 --
 <!--.element: data-auto-animate -->
 
@@ -181,6 +248,10 @@ Open UI5
   </mvc:View>
   ```
 </div><!-- .element class="fragment fade-up"  -->
+
+Note:
+- Another view
+- Controller name = virtual controller path
 
 --
 <!--.element: data-auto-animate -->
@@ -216,6 +287,13 @@ Open UI5
 </div>
 <!-- .element class="fragment fade-up" -->
 
+Note:
+- File path
+- Define new module
+  - Note **'Controller' dependency**
+- Extend module of the controller  
+  => virtual module already exists!
+
 --
 <!--.element: data-auto-animate -->
 ### Controller <!-- omit in toc -->
@@ -246,8 +324,17 @@ Open UI5
     return PageController;
   });
 ```
+Note:
+- 'Message Toast' dependency
+  - Is a nice way to show **popup-messages on the UI**
+
 --
 <!-- .element data-background-iframe="/content/ui5_examples/controller/webapp" -->
+Note:
+- Interactive hello-world app
+- Note: Everything is on GitHub  
+  if you want to take a look at it.
+
 --
 <!--.element: data-auto-animate -->
 ### Model (e.g. JSON / XML / *<u>OData</u>*)
@@ -280,13 +367,28 @@ Open UI5
     }, ...]
 }
 ```
+Note:
+- UI5 can use any model:
+  - XML
+  - oData
+    - Well established **protocol**
+      - for data transfer
+      - used by most SAP products  
+        => good support in UI5
+- Here: typical **json-model**
+- Note the encoding errors - UI5 will correct them
+
+This model contains:
+- Some **cities**
+- Some **countries**
+
 --
 <!--.element: data-auto-animate -->
 
 ### Model (e.g. JSON / XML / *<u>OData</u>*) <!-- omit in toc -->
 **Loading:**
 
-```javascript [2,3|9-13,20-21|15-18]
+```javascript [2,3|9-12,20-21|15-18]
 sap.ui.define(['sap/ui/core/mvc/Controller',
                'sap/ui/model/json/JSONModel'],
   function(Controller, JSONModel) {
@@ -315,6 +417,14 @@ sap.ui.define(['sap/ui/core/mvc/Controller',
 
 ```
 
+Note:
+Initialize json-model
+- Load **dependency**
+- In controller (here '`onInit()`'):
+  - **Load Data** from file (or other source)
+  - Set model in view
+- Iterate the model and **manipulate data**
+
 --
 <!--.element: data-auto-animate -->
 ### Model (e.g. JSON / XML / *<u>OData</u>*) <!-- omit in toc -->
@@ -340,8 +450,19 @@ sap.ui.define(['sap/ui/core/mvc/Controller',
 </mvc:View>
 ```
 
+Note:
+- Define a List
+  - With 1(!) list item
+- Use data from model
+  - If one attribute is an array  
+    => Component will iterate all members
+  - So: we will have a `<StandardListItem />` for each city
+
 --
 <!-- .element data-background-iframe="/content/ui5_examples/model/webapp" -->
+Note:
+- List App
+- Now you begin to see the use of out-of-the-box components and controls
 
 ==
 
@@ -390,9 +511,13 @@ Disadvantages:
 ## MIP <!-- omit in toc -->
 **(Most important points)** -->
 
+Note:
+
 ==
 
 # Q & A <!-- omit in toc -->
+
+Note:
 
 --
 
