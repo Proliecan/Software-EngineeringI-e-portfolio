@@ -525,4 +525,9 @@ Note:
 
 <div style="text-align:left">
 
-- [ui5.sap.com](https://ui5.sap.com/ )</div>
+- [ui5.sap.com](https://ui5.sap.com/ )
+
+Images:
+- [wikimedia.org](https://wikimedia.org)
+- [finnhub.io](https://finnhub.io)
+</div>
